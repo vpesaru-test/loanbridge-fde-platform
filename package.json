@@ -1,0 +1,19 @@
+{
+  "name": "loanbridge-fde-platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c cyan,green \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w server && npm run build -w client",
+    "test": "npm run test -w server"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

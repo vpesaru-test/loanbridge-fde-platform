@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: #f5f7fb;
+  color: #18243b;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Manrope, system-ui, sans-serif;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.panel {
+  @apply bg-white border border-slate-200 rounded-2xl shadow-sm;
+}
+
+.input {
+  @apply w-full border border-slate-200 rounded-xl px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-teal-400;
+}
+
+.btn {
+  @apply rounded-xl px-4 py-2.5 font-semibold transition-colors;
+}
+
+.btn-primary {
+  @apply btn bg-teal-700 text-white hover:bg-teal-800;
+}
+
+.btn-secondary {
+  @apply btn border border-slate-200 bg-white hover:bg-slate-50;
+}
+
+.nav {
+  @apply flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400;
+}
+
+.nav-active {
+  @apply bg-teal-900 text-white;
+}
